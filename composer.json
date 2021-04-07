@@ -1,0 +1,23 @@
+{
+	"name" : "keyi/1688openapi",
+	"description" : "openapi",
+	"version":"1",
+	"keywords" : [
+		"1688"
+	],
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "lennon"
+		}
+	],
+	"require" : {
+		"php" : "^7.2.5|^8.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Keyi1688\\" : "src/"
+		}
+	},
+	"minimum-stability" : "dev",
+	"prefer-stable" : true
+}
