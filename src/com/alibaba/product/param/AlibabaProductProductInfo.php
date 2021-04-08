@@ -2,11 +2,18 @@
 
 namespace Keyi1688\com\alibaba\product\param;
 
+use Illuminate\Support\Arr;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use ArrayObject;
+use Keyi1688\Arrayable;
 
+/**
+ * Class AlibabaProductProductInfo
+ * @package Keyi1688\com\alibaba\product\param
+ */
 class AlibabaProductProductInfo extends SDKDomain
 {
+    use Arrayable;
     private $productID;
 
     /**
@@ -73,7 +80,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $attributes;
 
     /**
-    * @return 商品属性和属性值
+    * @return AlibabaProductProductAttribute 商品属性和属性值
     */
     public function getAttributes()
     {
@@ -133,6 +140,9 @@ class AlibabaProductProductInfo extends SDKDomain
     }
 
 
+    /**
+     * @var
+     */
     private $subject;
 
     /**
@@ -262,7 +272,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $image;
 
     /**
-    * @return 商品主图
+    * @return AlibabaProductProductImageInfo 商品主图
     */
     public function getImage()
     {
@@ -283,7 +293,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $skuInfos;
 
     /**
-    * @return sku信息
+    * @return AlibabaProductProductSKUInfo[] sku信息
     */
     public function getSkuInfos()
     {
@@ -304,7 +314,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $saleInfo;
 
     /**
-    * @return 商品销售信息
+    * @return AlibabaProductProductSaleInfo 商品销售信息
     */
     public function getSaleInfo()
     {
@@ -325,7 +335,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $shippingInfo;
 
     /**
-    * @return 商品物流信息
+    * @return AlibabaProductProductShippingInfo 商品物流信息
     */
     public function getShippingInfo()
     {
@@ -346,7 +356,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $extendInfos;
 
     /**
-    * @return 商品扩展信息
+    * @return AlibabaProductProductExtendInfo 商品扩展信息
     */
     public function getExtendInfos()
     {
@@ -724,7 +734,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $internationalTradeInfo;
 
     /**
-    * @return 商品国际贸易信息，1688无需处理此字段
+    * @return AlibabaProductProductInternationalTradeInfo 商品国际贸易信息，1688无需处理此字段
     */
     public function getInternationalTradeInfo()
     {
@@ -745,7 +755,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $bizGroupInfos;
 
     /**
-    * @return 产品业务的支持信息,support为false说明不支持.
+    * @return AlibabaProductProductBizGroupInfo[] 产品业务的支持信息,support为false说明不支持.
     */
     public function getBizGroupInfos()
     {
@@ -787,7 +797,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $intelligentInfo;
 
     /**
-    * @return 商品算法智能改写信息，包含算法优化后的商品标题和图片信息，未改写的则直接返回原标题和原图片
+    * @return ComAlibabaOceanOpenplatformBizProductCommonModelProductIntelligentInfo 商品算法智能改写信息，包含算法优化后的商品标题和图片信息，未改写的则直接返回原标题和原图片
     */
     public function getIntelligentInfo()
     {
@@ -967,6 +977,7 @@ class AlibabaProductProductInfo extends SDKDomain
             $this->intelligentInfo->setStdResult($intelligentInfoResult);
         }
     }
+
 
     private $arrayResult;
     public function setArrayResult($arrayResult)

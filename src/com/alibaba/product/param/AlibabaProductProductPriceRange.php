@@ -1,13 +1,13 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
-
 class AlibabaProductProductPriceRange extends SDKDomain
 {
+    use Arrayable;
     private $startQuantity;
-    
+
     /**
     * @return 起批量
     */
@@ -15,7 +15,7 @@ class AlibabaProductProductPriceRange extends SDKDomain
     {
         return $this->startQuantity;
     }
-    
+
     /**
      * 设置起批量
      * @param Integer $startQuantity
@@ -25,10 +25,10 @@ class AlibabaProductProductPriceRange extends SDKDomain
     {
         $this->startQuantity = $startQuantity;
     }
-    
-            
+
+
     private $price;
-    
+
     /**
     * @return 价格
     */
@@ -36,7 +36,7 @@ class AlibabaProductProductPriceRange extends SDKDomain
     {
         return $this->price;
     }
-    
+
     /**
      * 设置价格
      * @param Double $price
@@ -46,10 +46,10 @@ class AlibabaProductProductPriceRange extends SDKDomain
     {
         $this->price = $price;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -60,7 +60,7 @@ class AlibabaProductProductPriceRange extends SDKDomain
             $this->price = $this->stdResult->{"price"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

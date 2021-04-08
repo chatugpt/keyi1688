@@ -1,15 +1,16 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
 use Keyi1688\AlibabaProductGetByStatusParam\AlibabaOceanOpenplatformBizProductResultProductInfoListResult;
 
 class AlibabaProductGetByStatusResult
 {
+    use Arrayable;
     private $result;
-    
+
     /**
     * @return 查询结果
     */
@@ -17,7 +18,7 @@ class AlibabaProductGetByStatusResult
     {
         return $this->result;
     }
-    
+
     /**
      * 设置查询结果
      * @param AlibabaOceanOpenplatformBizProductResultProductInfoListResult $result
@@ -27,10 +28,10 @@ class AlibabaProductGetByStatusResult
     {
         $this->result = $result;
     }
-    
-            
+
+
     private $errorCode;
-    
+
     /**
     * @return 错误码
     */
@@ -38,7 +39,7 @@ class AlibabaProductGetByStatusResult
     {
         return $this->errorCode;
     }
-    
+
     /**
      * 设置错误码
      * @param String $errorCode
@@ -48,10 +49,10 @@ class AlibabaProductGetByStatusResult
     {
         $this->errorCode = $errorCode;
     }
-    
-            
+
+
     private $errorMessage;
-    
+
     /**
     * @return 错误信息
     */
@@ -59,7 +60,7 @@ class AlibabaProductGetByStatusResult
     {
         return $this->errorMessage;
     }
-    
+
     /**
      * 设置错误信息
      * @param String $errorMessage
@@ -69,10 +70,10 @@ class AlibabaProductGetByStatusResult
     {
         $this->errorMessage = $errorMessage;
     }
-    
-            
+
+
     private $success;
-    
+
     /**
     * @return
     */
@@ -80,7 +81,7 @@ class AlibabaProductGetByStatusResult
     {
         return $this->success;
     }
-    
+
     /**
      * 设置
      * @param Boolean $success
@@ -90,10 +91,10 @@ class AlibabaProductGetByStatusResult
     {
         $this->success = $success;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -112,7 +113,7 @@ class AlibabaProductGetByStatusResult
             $this->success = $this->stdResult->{"success"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

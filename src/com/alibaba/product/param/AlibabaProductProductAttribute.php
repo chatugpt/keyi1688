@@ -2,12 +2,14 @@
 
 namespace Keyi1688\com\alibaba\product\param;
 
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 
 class AlibabaProductProductAttribute extends SDKDomain
 {
+    use Arrayable;
     private $attributeID;
-    
+
     /**
     * @return 属性ID
     */
@@ -15,7 +17,7 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         return $this->attributeID;
     }
-    
+
     /**
      * 设置属性ID
      * @param Long $attributeID
@@ -25,10 +27,10 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         $this->attributeID = $attributeID;
     }
-    
-            
+
+
     private $attributeName;
-    
+
     /**
     * @return 属性名称
     */
@@ -36,7 +38,7 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         return $this->attributeName;
     }
-    
+
     /**
      * 设置属性名称
      * @param String $attributeName
@@ -46,10 +48,10 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         $this->attributeName = $attributeName;
     }
-    
-            
+
+
     private $valueID;
-    
+
     /**
     * @return 属性值ID
     */
@@ -57,7 +59,7 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         return $this->valueID;
     }
-    
+
     /**
      * 设置属性值ID
      * @param Long $valueID
@@ -67,10 +69,10 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         $this->valueID = $valueID;
     }
-    
-            
+
+
     private $value;
-    
+
     /**
     * @return 属性值
     */
@@ -78,7 +80,7 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         return $this->value;
     }
-    
+
     /**
      * 设置属性值
      * @param String $value
@@ -88,10 +90,10 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         $this->value = $value;
     }
-    
-            
+
+
     private $isCustom;
-    
+
     /**
     * @return 是否为自定义属性，国际站无需关注
     */
@@ -99,7 +101,7 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         return $this->isCustom;
     }
-    
+
     /**
      * 设置是否为自定义属性，国际站无需关注
      * @param Boolean $isCustom
@@ -109,10 +111,10 @@ class AlibabaProductProductAttribute extends SDKDomain
     {
         $this->isCustom = $isCustom;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -132,7 +134,7 @@ class AlibabaProductProductAttribute extends SDKDomain
             $this->isCustom = $this->stdResult->{"isCustom"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

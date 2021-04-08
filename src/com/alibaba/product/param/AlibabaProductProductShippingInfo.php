@@ -1,14 +1,15 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
 
 class AlibabaProductProductShippingInfo extends SDKDomain
 {
+    use Arrayable;
     private $freightTemplateID;
-    
+
     /**
     * @return 运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取
     */
@@ -16,7 +17,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->freightTemplateID;
     }
-    
+
     /**
      * 设置运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取
      * @param Long $freightTemplateID
@@ -26,10 +27,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->freightTemplateID = $freightTemplateID;
     }
-    
-            
+
+
     private $unitWeight;
-    
+
     /**
     * @return 重量/毛重
     */
@@ -37,7 +38,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->unitWeight;
     }
-    
+
     /**
      * 设置重量/毛重
      * @param Double $unitWeight
@@ -47,10 +48,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->unitWeight = $unitWeight;
     }
-    
-            
+
+
     private $packageSize;
-    
+
     /**
     * @return 尺寸，单位是厘米，长宽高范围是1-9999999。1688无需关注此字段
     */
@@ -58,7 +59,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->packageSize;
     }
-    
+
     /**
      * 设置尺寸，单位是厘米，长宽高范围是1-9999999。1688无需关注此字段
      * @param String $packageSize
@@ -68,10 +69,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->packageSize = $packageSize;
     }
-    
-            
+
+
     private $volume;
-    
+
     /**
     * @return 体积，单位是立方厘米，范围是1-9999999，1688无需关注此字段
     */
@@ -79,7 +80,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->volume;
     }
-    
+
     /**
      * 设置体积，单位是立方厘米，范围是1-9999999，1688无需关注此字段
      * @param Integer $volume
@@ -89,10 +90,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->volume = $volume;
     }
-    
-            
+
+
     private $handlingTime;
-    
+
     /**
     * @return 备货期，单位是天，范围是1-60。1688无需处理此字段
     */
@@ -100,7 +101,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->handlingTime;
     }
-    
+
     /**
      * 设置备货期，单位是天，范围是1-60。1688无需处理此字段
      * @param Integer $handlingTime
@@ -110,10 +111,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->handlingTime = $handlingTime;
     }
-    
-            
+
+
     private $sendGoodsAddressId;
-    
+
     /**
     * @return 发货地址ID，国际站无需处理此字段
     */
@@ -121,7 +122,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->sendGoodsAddressId;
     }
-    
+
     /**
      * 设置发货地址ID，国际站无需处理此字段
      * @param Long $sendGoodsAddressId
@@ -131,10 +132,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->sendGoodsAddressId = $sendGoodsAddressId;
     }
-    
-            
+
+
     private $sendGoodsAddressText;
-    
+
     /**
     * @return 发货地描述
     */
@@ -142,7 +143,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->sendGoodsAddressText;
     }
-    
+
     /**
      * 设置发货地描述
      * @param String $sendGoodsAddressText
@@ -152,10 +153,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->sendGoodsAddressText = $sendGoodsAddressText;
     }
-    
-            
+
+
     private $suttleWeight;
-    
+
     /**
     * @return 净重
     */
@@ -163,7 +164,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->suttleWeight;
     }
-    
+
     /**
      * 设置净重
      * @param Double $suttleWeight
@@ -173,10 +174,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->suttleWeight = $suttleWeight;
     }
-    
-            
+
+
     private $width;
-    
+
     /**
     * @return 宽度
     */
@@ -184,7 +185,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->width;
     }
-    
+
     /**
      * 设置宽度
      * @param Double $width
@@ -194,10 +195,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->width = $width;
     }
-    
-            
+
+
     private $height;
-    
+
     /**
     * @return 高度
     */
@@ -205,7 +206,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->height;
     }
-    
+
     /**
      * 设置高度
      * @param Double $height
@@ -215,10 +216,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->height = $height;
     }
-    
-            
+
+
     private $length;
-    
+
     /**
     * @return 长度
     */
@@ -226,7 +227,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->length;
     }
-    
+
     /**
      * 设置长度
      * @param Double $length
@@ -236,10 +237,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->length = $length;
     }
-    
-            
+
+
     private $freightTemplate;
-    
+
     /**
     * @return 1
     */
@@ -247,7 +248,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->freightTemplate;
     }
-    
+
     /**
      * 设置1
      * @param array include @see AlibabaProductFreightTemplate[] $freightTemplate
@@ -257,10 +258,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->freightTemplate = $freightTemplate;
     }
-    
-            
+
+
     private $channelPriceFreePostage;
-    
+
     /**
     * @return 厂货通渠道专享价是否包邮，要结合非包邮地址，如果收货地址在非包邮地区则商品为不包邮
     */
@@ -268,7 +269,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->channelPriceFreePostage;
     }
-    
+
     /**
      * 设置厂货通渠道专享价是否包邮，要结合非包邮地址，如果收货地址在非包邮地区则商品为不包邮
      * @param Boolean $channelPriceFreePostage
@@ -278,10 +279,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->channelPriceFreePostage = $channelPriceFreePostage;
     }
-    
-            
+
+
     private $channelPriceExcludeAreaCodes;
-    
+
     /**
     * @return 厂货通渠道专享价非包邮地区（地址信息列表，省份信息）
     */
@@ -289,7 +290,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         return $this->channelPriceExcludeAreaCodes;
     }
-    
+
     /**
      * 设置厂货通渠道专享价非包邮地区（地址信息列表，省份信息）
      * @param array include @see ComAlibabaOceanOpenplatformBizTradeResultProductAddressCode[] $channelPriceExcludeAreaCodes
@@ -299,10 +300,10 @@ class AlibabaProductProductShippingInfo extends SDKDomain
     {
         $this->channelPriceExcludeAreaCodes = $channelPriceExcludeAreaCodes;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -365,7 +366,7 @@ class AlibabaProductProductShippingInfo extends SDKDomain
             }
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

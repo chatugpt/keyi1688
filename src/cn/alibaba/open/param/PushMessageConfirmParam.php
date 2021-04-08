@@ -1,7 +1,6 @@
 <?php
 
 namespace Keyi1688\cn\alibaba\open\param;
-
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
 

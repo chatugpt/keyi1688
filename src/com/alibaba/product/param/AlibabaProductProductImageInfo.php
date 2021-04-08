@@ -1,13 +1,13 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
-
 class AlibabaProductProductImageInfo extends SDKDomain
 {
+    use Arrayable;
     private $images;
-    
+
     /**
     * @return 主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/
     */
@@ -15,7 +15,7 @@ class AlibabaProductProductImageInfo extends SDKDomain
     {
         return $this->images;
     }
-    
+
     /**
      * 设置主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/
      * @param array include @see String[] $images
@@ -25,10 +25,10 @@ class AlibabaProductProductImageInfo extends SDKDomain
     {
         $this->images = $images;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -36,7 +36,7 @@ class AlibabaProductProductImageInfo extends SDKDomain
             $this->images = $this->stdResult->{"images"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

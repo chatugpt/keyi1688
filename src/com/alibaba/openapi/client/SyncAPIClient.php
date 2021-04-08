@@ -27,7 +27,7 @@ class SyncAPIClient
             $this->clientPolicy = $mix;
         }
     }
-    
+
     public function execute($namespace, $apiName, $version, $requestDefiniation, $resultDefiniation, $accessToken)
     {
         $apiRequest = new APIRequest();
@@ -37,7 +37,7 @@ class SyncAPIClient
         $apiRequest->requestEntity=$requestDefiniation;
         return $this->send($apiRequest, $resultDefiniation, new RequestPolicy());
     }
-    
+
     public function send(APIRequest $request, $resultDefiniation, RequestPolicy $requestPolicy)
     {
         $urlRequest = $this->generateRequestPath($request, $requestPolicy, $this->clientPolicy);
@@ -54,7 +54,7 @@ class SyncAPIClient
                 $urlRequest = "http://" . $this->clientPolicy->serverHost .":".$this->clientPolicy->httpPort . $urlRequest;
             }
         }
-        
+
         $serializerTools = SerializerProvider::getSerializer($requestPolicy->requestProtocol);
         $requestData = $serializerTools->serialize($request->requestEntity);
         $requestData = array_merge($requestData, $request->addtionalParams);
@@ -90,7 +90,7 @@ class SyncAPIClient
             curl_setopt($ch, CURLOPT_POST, 0);
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            
+
             $result = $newclient->get($urlRequest, $requestData);
         } else {
             curl_setopt($ch, CURLOPT_URL, $urlRequest);
@@ -130,7 +130,7 @@ class SyncAPIClient
         } else {
             $urlResult = "/openapi";
         }
-        
+
         $defs = array(
                 $urlResult,
                 "/",
@@ -144,9 +144,9 @@ class SyncAPIClient
                 "/",
                 $clientPolicy->appKey
         );
-        
+
         $urlResult = implode($defs);
-        
+
         return $urlResult;
     }
     private function generateAPIPath(APIRequest $request, RequestPolicy $requestPolicy, ClientPolicy $clientPolicy)
@@ -164,9 +164,9 @@ class SyncAPIClient
                 "/",
                 $clientPolicy->appKey
         );
-        
+
         $urlResult = implode($defs);
-        
+
         return $urlResult;
     }
 }

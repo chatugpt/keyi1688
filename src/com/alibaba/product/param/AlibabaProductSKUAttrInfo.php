@@ -1,14 +1,15 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
 
 class AlibabaProductSKUAttrInfo extends SDKDomain
 {
+    use Arrayable;
     private $attributeID;
-    
+
     /**
     * @return sku属性ID
     */
@@ -16,7 +17,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->attributeID;
     }
-    
+
     /**
      * 设置sku属性ID
      * @param Long $attributeID
@@ -26,10 +27,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->attributeID = $attributeID;
     }
-    
-            
+
+
     private $attValueID;
-    
+
     /**
     * @return sku值ID，1688不用关注
     */
@@ -37,7 +38,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->attValueID;
     }
-    
+
     /**
      * 设置sku值ID，1688不用关注
      * @param Long $attValueID
@@ -47,10 +48,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->attValueID = $attValueID;
     }
-    
-            
+
+
     private $attributeValue;
-    
+
     /**
     * @return sku值内容，国际站不用关注
     */
@@ -58,7 +59,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->attributeValue;
     }
-    
+
     /**
      * 设置sku值内容，国际站不用关注
      * @param String $attributeValue
@@ -68,10 +69,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->attributeValue = $attributeValue;
     }
-    
-            
+
+
     private $customValueName;
-    
+
     /**
     * @return 自定义属性值名称，1688无需关注
     */
@@ -79,7 +80,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->customValueName;
     }
-    
+
     /**
      * 设置自定义属性值名称，1688无需关注
      * @param String $customValueName
@@ -89,10 +90,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->customValueName = $customValueName;
     }
-    
-            
+
+
     private $skuImageUrl;
-    
+
     /**
     * @return sku图片
     */
@@ -100,7 +101,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->skuImageUrl;
     }
-    
+
     /**
      * 设置sku图片
      * @param String $skuImageUrl
@@ -110,10 +111,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->skuImageUrl = $skuImageUrl;
     }
-    
-            
+
+
     private $attributeDisplayName;
-    
+
     /**
     * @return sku属性ID所对应的显示名，比如颜色，尺码
     */
@@ -121,7 +122,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->attributeDisplayName;
     }
-    
+
     /**
      * 设置sku属性ID所对应的显示名，比如颜色，尺码
      * @param String $attributeDisplayName
@@ -131,10 +132,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->attributeDisplayName = $attributeDisplayName;
     }
-    
-            
+
+
     private $attrType;
-    
+
     /**
     * @return 属性类型
     */
@@ -142,7 +143,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->attrType;
     }
-    
+
     /**
      * 设置属性类型
      * @param String $attrType
@@ -152,10 +153,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->attrType = $attrType;
     }
-    
-            
+
+
     private $attributeName;
-    
+
     /**
     * @return sku属性ID所对应的显示名，比如颜色，尺码
     */
@@ -163,7 +164,7 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         return $this->attributeName;
     }
-    
+
     /**
      * 设置sku属性ID所对应的显示名，比如颜色，尺码
      * @param String $attributeName
@@ -173,10 +174,10 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
     {
         $this->attributeName = $attributeName;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -205,34 +206,34 @@ class AlibabaProductSKUAttrInfo extends SDKDomain
             $this->attributeName = $this->stdResult->{"attributeName"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {
         $this->arrayResult = $arrayResult;
         if (array_key_exists("attributeID", $this->arrayResult)) {
-            $this->attributeID = $arrayResult['${paramType.paramName}'];
+            $this->attributeID = $arrayResult['attributeID'];
         }
         if (array_key_exists("attValueID", $this->arrayResult)) {
-            $this->attValueID = $arrayResult['${paramType.paramName}'];
+            $this->attValueID = $arrayResult['attValueID'];
         }
         if (array_key_exists("attributeValue", $this->arrayResult)) {
-            $this->attributeValue = $arrayResult['${paramType.paramName}'];
+            $this->attributeValue = $arrayResult['attributeValue'];
         }
         if (array_key_exists("customValueName", $this->arrayResult)) {
-            $this->customValueName = $arrayResult['${paramType.paramName}'];
+            $this->customValueName = $arrayResult['customValueName'];
         }
         if (array_key_exists("skuImageUrl", $this->arrayResult)) {
-            $this->skuImageUrl = $arrayResult['${paramType.paramName}'];
+            $this->skuImageUrl = $arrayResult['skuImageUrl'];
         }
         if (array_key_exists("attributeDisplayName", $this->arrayResult)) {
-            $this->attributeDisplayName = $arrayResult['${paramType.paramName}'];
+            $this->attributeDisplayName = $arrayResult['attributeDisplayName'];
         }
         if (array_key_exists("attrType", $this->arrayResult)) {
-            $this->attrType = $arrayResult['${paramType.paramName}'];
+            $this->attrType = $arrayResult['attrType'];
         }
         if (array_key_exists("attributeName", $this->arrayResult)) {
-            $this->attributeName = $arrayResult['${paramType.paramName}'];
+            $this->attributeName = $arrayResult['attributeName'];
         }
     }
 }

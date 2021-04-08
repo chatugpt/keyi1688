@@ -1,9 +1,7 @@
 <?php
 namespace Keyi1688\com\alibaba\china\openapi\client\example\param\apiexample;
-
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
-
 class ExamplePerson extends SDKDomain
 {
     private $name;

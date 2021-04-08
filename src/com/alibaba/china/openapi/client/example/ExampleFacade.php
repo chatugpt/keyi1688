@@ -1,6 +1,5 @@
 <?php
 namespace Keyi1688\com\alibaba\china\openapi\client\example;
-
 use Keyi1688\com\alibaba\openapi\client\APIId;
 use Keyi1688\com\alibaba\openapi\client\APIRequest;
 use Keyi1688\com\alibaba\openapi\client\APIResponse;

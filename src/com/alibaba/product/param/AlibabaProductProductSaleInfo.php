@@ -1,15 +1,15 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
 use ArrayObject;
-
 class AlibabaProductProductSaleInfo extends SDKDomain
 {
+    use Arrayable;
     private $supportOnlineTrade;
-    
+
     /**
     * @return 是否支持网上交易。true：支持 false：不支持
     */
@@ -17,7 +17,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->supportOnlineTrade;
     }
-    
+
     /**
      * 设置是否支持网上交易。true：支持 false：不支持
      * @param Boolean $supportOnlineTrade
@@ -27,10 +27,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->supportOnlineTrade = $supportOnlineTrade;
     }
-    
-            
+
+
     private $mixWholeSale;
-    
+
     /**
     * @return 是否支持混批
     */
@@ -38,7 +38,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->mixWholeSale;
     }
-    
+
     /**
      * 设置是否支持混批
      * @param Boolean $mixWholeSale
@@ -48,10 +48,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->mixWholeSale = $mixWholeSale;
     }
-    
-            
+
+
     private $priceAuth;
-    
+
     /**
     * @return 是否价格私密信息
     */
@@ -59,7 +59,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->priceAuth;
     }
-    
+
     /**
      * 设置是否价格私密信息
      * @param Boolean $priceAuth
@@ -69,10 +69,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->priceAuth = $priceAuth;
     }
-    
-            
+
+
     private $priceRanges;
-    
+
     /**
     * @return 区间价格。按数量范围设定的区间价格
     */
@@ -80,7 +80,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->priceRanges;
     }
-    
+
     /**
      * 设置区间价格。按数量范围设定的区间价格
      * @param array include @see AlibabaProductProductPriceRange[] $priceRanges
@@ -90,10 +90,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->priceRanges = $priceRanges;
     }
-    
-            
+
+
     private $amountOnSale;
-    
+
     /**
     * @return 可售数量
     */
@@ -101,7 +101,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->amountOnSale;
     }
-    
+
     /**
      * 设置可售数量
      * @param Double $amountOnSale
@@ -111,10 +111,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->amountOnSale = $amountOnSale;
     }
-    
-            
+
+
     private $unit;
-    
+
     /**
     * @return 计量单位
     */
@@ -122,7 +122,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->unit;
     }
-    
+
     /**
      * 设置计量单位
      * @param String $unit
@@ -132,10 +132,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->unit = $unit;
     }
-    
-            
+
+
     private $minOrderQuantity;
-    
+
     /**
     * @return 最小起订量，范围是1-99999。
     */
@@ -143,7 +143,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->minOrderQuantity;
     }
-    
+
     /**
      * 设置最小起订量，范围是1-99999。
      * @param Integer $minOrderQuantity
@@ -153,10 +153,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->minOrderQuantity = $minOrderQuantity;
     }
-    
-            
+
+
     private $batchNumber;
-    
+
     /**
     * @return 每批数量，默认为空或者非零值，该属性不为空时sellunit为必填
     */
@@ -164,7 +164,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->batchNumber;
     }
-    
+
     /**
      * 设置每批数量，默认为空或者非零值，该属性不为空时sellunit为必填
      * @param Integer $batchNumber
@@ -174,10 +174,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->batchNumber = $batchNumber;
     }
-    
-            
+
+
     private $retailprice;
-    
+
     /**
     * @return 建议零售价
     */
@@ -185,7 +185,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->retailprice;
     }
-    
+
     /**
      * 设置建议零售价
      * @param Double $retailprice
@@ -195,10 +195,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->retailprice = $retailprice;
     }
-    
-            
+
+
     private $tax;
-    
+
     /**
     * @return 税率相关信息，内容由用户自定
     */
@@ -206,7 +206,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->tax;
     }
-    
+
     /**
      * 设置税率相关信息，内容由用户自定
      * @param String $tax
@@ -216,10 +216,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->tax = $tax;
     }
-    
-            
+
+
     private $sellunit;
-    
+
     /**
     * @return 售卖单位，如果为批量售卖，代表售卖的单位，该属性不为空时batchNumber为必填，例如1"手"=12“件"的"手"
     */
@@ -227,7 +227,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->sellunit;
     }
-    
+
     /**
      * 设置售卖单位，如果为批量售卖，代表售卖的单位，该属性不为空时batchNumber为必填，例如1"手"=12“件"的"手"
      * @param String $sellunit
@@ -237,10 +237,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->sellunit = $sellunit;
     }
-    
-            
+
+
     private $quoteType;
-    
+
     /**
     * @return 0-无SKU按数量报价,1-有SKU按规格报价,2-有SKU按数量报价
     */
@@ -248,7 +248,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->quoteType;
     }
-    
+
     /**
      * 设置0-无SKU按数量报价,1-有SKU按规格报价,2-有SKU按数量报价
      * @param Integer $quoteType
@@ -258,10 +258,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->quoteType = $quoteType;
     }
-    
-            
+
+
     private $consignPrice;
-    
+
     /**
     * @return 分销基准价。代销场景均使用该价格。有SKU商品查看skuInfo中的consignPrice
     */
@@ -269,7 +269,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->consignPrice;
     }
-    
+
     /**
      * 设置分销基准价。代销场景均使用该价格。有SKU商品查看skuInfo中的consignPrice
      * @param Double $consignPrice
@@ -279,10 +279,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->consignPrice = $consignPrice;
     }
-    
-            
+
+
     private $cpsSuggestPrice;
-    
+
     /**
     * @return CPS建议价（单位：元）
     */
@@ -290,7 +290,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->cpsSuggestPrice;
     }
-    
+
     /**
      * 设置CPS建议价（单位：元）
      * @param Double $cpsSuggestPrice
@@ -300,10 +300,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->cpsSuggestPrice = $cpsSuggestPrice;
     }
-    
-            
+
+
     private $saleType;
-    
+
     /**
     * @return 销售方式，按件卖(normal)或者按批卖(batch)，1688站点无需关注此字段
     */
@@ -311,7 +311,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->saleType;
     }
-    
+
     /**
      * 设置销售方式，按件卖(normal)或者按批卖(batch)，1688站点无需关注此字段
      * @param String $saleType
@@ -321,10 +321,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->saleType = $saleType;
     }
-    
-            
+
+
     private $deliveryLimit;
-    
+
     /**
     * @return 发货时间限制（非买保发货周期），按天计算
     */
@@ -332,7 +332,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->deliveryLimit;
     }
-    
+
     /**
      * 设置发货时间限制（非买保发货周期），按天计算
      * @param Integer $deliveryLimit
@@ -342,10 +342,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->deliveryLimit = $deliveryLimit;
     }
-    
-            
+
+
     private $channelPrice;
-    
+
     /**
     * @return 厂货通渠道专享价（单位：元）
     */
@@ -353,7 +353,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         return $this->channelPrice;
     }
-    
+
     /**
      * 设置厂货通渠道专享价（单位：元）
      * @param Double $channelPrice
@@ -363,10 +363,10 @@ class AlibabaProductProductSaleInfo extends SDKDomain
     {
         $this->channelPrice = $channelPrice;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -430,7 +430,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
             $this->channelPrice = $this->stdResult->{"channelPrice"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

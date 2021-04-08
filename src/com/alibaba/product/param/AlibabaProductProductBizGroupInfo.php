@@ -1,12 +1,14 @@
 <?php
 namespace Keyi1688\com\alibaba\product\param;
 
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 
 class AlibabaProductProductBizGroupInfo extends SDKDomain
 {
+    use Arrayable;
     private $support;
-    
+
     /**
     * @return 是否支持
     */
@@ -14,7 +16,7 @@ class AlibabaProductProductBizGroupInfo extends SDKDomain
     {
         return $this->support;
     }
-    
+
     /**
      * 设置是否支持
      * @param Boolean $support
@@ -24,10 +26,10 @@ class AlibabaProductProductBizGroupInfo extends SDKDomain
     {
         $this->support = $support;
     }
-    
-            
+
+
     private $description;
-    
+
     /**
     * @return 垂直市场名字，如微供市场、货品市场
     */
@@ -35,7 +37,7 @@ class AlibabaProductProductBizGroupInfo extends SDKDomain
     {
         return $this->description;
     }
-    
+
     /**
      * 设置垂直市场名字，如微供市场、货品市场
      * @param String $description
@@ -45,10 +47,10 @@ class AlibabaProductProductBizGroupInfo extends SDKDomain
     {
         $this->description = $description;
     }
-    
-            
+
+
     private $code;
-    
+
     /**
     * @return 垂直市场标记
     */
@@ -56,7 +58,7 @@ class AlibabaProductProductBizGroupInfo extends SDKDomain
     {
         return $this->code;
     }
-    
+
     /**
      * 设置垂直市场标记
      * @param String $code
@@ -66,10 +68,10 @@ class AlibabaProductProductBizGroupInfo extends SDKDomain
     {
         $this->code = $code;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -83,7 +85,7 @@ class AlibabaProductProductBizGroupInfo extends SDKDomain
             $this->code = $this->stdResult->{"code"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

@@ -8,15 +8,15 @@ use  Keyi1688\com\alibaba\product\param\AlibabaProductProductInfo;
 class AlibabaCrossProductInfoResult
 {
     private $productInfo;
-    
+
     /**
-    * @return 商品详情
+    * @return AlibabaProductProductInfo 商品详情
     */
     public function getProductInfo()
     {
         return $this->productInfo;
     }
-    
+
     /**
      * 设置商品详情
      * @param AlibabaProductProductInfo $productInfo
@@ -26,10 +26,10 @@ class AlibabaCrossProductInfoResult
     {
         $this->productInfo = $productInfo;
     }
-    
-            
+
+
     private $bizGroupInfos;
-    
+
     /**
     * @return 产品业务的支持信息,support为false说明不支持.
     */
@@ -37,7 +37,7 @@ class AlibabaCrossProductInfoResult
     {
         return $this->bizGroupInfos;
     }
-    
+
     /**
      * 设置产品业务的支持信息,support为false说明不支持.
      * @param array include @see AlibabaProductProductBizGroupInfo[] $bizGroupInfos
@@ -47,10 +47,10 @@ class AlibabaCrossProductInfoResult
     {
         $this->bizGroupInfos = $bizGroupInfos;
     }
-    
-            
+
+
     private $success;
-    
+
     /**
     * @return 是否成功
     */
@@ -58,7 +58,7 @@ class AlibabaCrossProductInfoResult
     {
         return $this->success;
     }
-    
+
     /**
      * 设置是否成功
      * @param Boolean $success
@@ -68,10 +68,10 @@ class AlibabaCrossProductInfoResult
     {
         $this->success = $success;
     }
-    
-            
+
+
     private $message;
-    
+
     /**
     * @return 调用信息
     */
@@ -79,7 +79,7 @@ class AlibabaCrossProductInfoResult
     {
         return $this->message;
     }
-    
+
     /**
      * 设置调用信息
      * @param String $message
@@ -89,10 +89,10 @@ class AlibabaCrossProductInfoResult
     {
         $this->message = $message;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -119,7 +119,7 @@ class AlibabaCrossProductInfoResult
             $this->message = $this->stdResult->{"message"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

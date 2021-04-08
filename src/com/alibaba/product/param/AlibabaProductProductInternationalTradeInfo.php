@@ -1,14 +1,15 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
 
 class AlibabaProductProductInternationalTradeInfo extends SDKDomain
 {
+    use Arrayable;
     private $fobCurrency;
-    
+
     /**
     * @return FOB价格货币，参见FAQ 货币枚举值
     */
@@ -16,7 +17,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->fobCurrency;
     }
-    
+
     /**
      * 设置FOB价格货币，参见FAQ 货币枚举值
      * @param String $fobCurrency
@@ -26,10 +27,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->fobCurrency = $fobCurrency;
     }
-    
-            
+
+
     private $fobMinPrice;
-    
+
     /**
     * @return FOB最小价格
     */
@@ -37,7 +38,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->fobMinPrice;
     }
-    
+
     /**
      * 设置FOB最小价格
      * @param String $fobMinPrice
@@ -47,10 +48,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->fobMinPrice = $fobMinPrice;
     }
-    
-            
+
+
     private $fobMaxPrice;
-    
+
     /**
     * @return FOB最大价格
     */
@@ -58,7 +59,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->fobMaxPrice;
     }
-    
+
     /**
      * 设置FOB最大价格
      * @param String $fobMaxPrice
@@ -68,10 +69,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->fobMaxPrice = $fobMaxPrice;
     }
-    
-            
+
+
     private $fobUnitType;
-    
+
     /**
     * @return FOB计量单位，参见FAQ 计量单位枚举值
     */
@@ -79,7 +80,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->fobUnitType;
     }
-    
+
     /**
      * 设置FOB计量单位，参见FAQ 计量单位枚举值
      * @param String $fobUnitType
@@ -89,10 +90,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->fobUnitType = $fobUnitType;
     }
-    
-            
+
+
     private $paymentMethods;
-    
+
     /**
     * @return 付款方式，参见FAQ 付款方式枚举值
     */
@@ -100,7 +101,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->paymentMethods;
     }
-    
+
     /**
      * 设置付款方式，参见FAQ 付款方式枚举值
      * @param array include @see String[] $paymentMethods
@@ -110,10 +111,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->paymentMethods = $paymentMethods;
     }
-    
-            
+
+
     private $minOrderQuantity;
-    
+
     /**
     * @return 最小起订量
     */
@@ -121,7 +122,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->minOrderQuantity;
     }
-    
+
     /**
      * 设置最小起订量
      * @param Integer $minOrderQuantity
@@ -131,10 +132,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->minOrderQuantity = $minOrderQuantity;
     }
-    
-            
+
+
     private $minOrderUnitType;
-    
+
     /**
     * @return 最小起订量计量单位，参见FAQ 计量单位枚举值
     */
@@ -142,7 +143,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->minOrderUnitType;
     }
-    
+
     /**
      * 设置最小起订量计量单位，参见FAQ 计量单位枚举值
      * @param String $minOrderUnitType
@@ -152,10 +153,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->minOrderUnitType = $minOrderUnitType;
     }
-    
-            
+
+
     private $supplyQuantity;
-    
+
     /**
     * @return supplyQuantity
     */
@@ -163,7 +164,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->supplyQuantity;
     }
-    
+
     /**
      * 设置supplyQuantity
      * @param Integer $supplyQuantity
@@ -173,10 +174,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->supplyQuantity = $supplyQuantity;
     }
-    
-            
+
+
     private $supplyUnitType;
-    
+
     /**
     * @return 供货能力计量单位，参见FAQ 计量单位枚举值
     */
@@ -184,7 +185,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->supplyUnitType;
     }
-    
+
     /**
      * 设置供货能力计量单位，参见FAQ 计量单位枚举值
      * @param String $supplyUnitType
@@ -194,10 +195,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->supplyUnitType = $supplyUnitType;
     }
-    
-            
+
+
     private $supplyPeriodType;
-    
+
     /**
     * @return 供货能力周期，参见FAQ 时间周期枚举值
     */
@@ -205,7 +206,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->supplyPeriodType;
     }
-    
+
     /**
      * 设置供货能力周期，参见FAQ 时间周期枚举值
      * @param String $supplyPeriodType
@@ -215,10 +216,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->supplyPeriodType = $supplyPeriodType;
     }
-    
-            
+
+
     private $deliveryPort;
-    
+
     /**
     * @return 发货港口
     */
@@ -226,7 +227,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->deliveryPort;
     }
-    
+
     /**
      * 设置发货港口
      * @param String $deliveryPort
@@ -236,10 +237,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->deliveryPort = $deliveryPort;
     }
-    
-            
+
+
     private $deliveryTime;
-    
+
     /**
     * @return 发货期限
     */
@@ -247,7 +248,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->deliveryTime;
     }
-    
+
     /**
      * 设置发货期限
      * @param String $deliveryTime
@@ -257,10 +258,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->deliveryTime = $deliveryTime;
     }
-    
-            
+
+
     private $consignmentDate;
-    
+
     /**
     * @return 新发货期限
     */
@@ -268,7 +269,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->consignmentDate;
     }
-    
+
     /**
      * 设置新发货期限
      * @param Integer $consignmentDate
@@ -278,10 +279,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->consignmentDate = $consignmentDate;
     }
-    
-            
+
+
     private $packagingDesc;
-    
+
     /**
     * @return 常规包装
     */
@@ -289,7 +290,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         return $this->packagingDesc;
     }
-    
+
     /**
      * 设置常规包装
      * @param String $packagingDesc
@@ -299,10 +300,10 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
     {
         $this->packagingDesc = $packagingDesc;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -349,7 +350,7 @@ class AlibabaProductProductInternationalTradeInfo extends SDKDomain
             $this->packagingDesc = $this->stdResult->{"packagingDesc"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

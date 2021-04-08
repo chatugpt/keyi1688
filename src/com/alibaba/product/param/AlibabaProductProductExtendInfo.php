@@ -1,13 +1,13 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
-
+use Keyi1688\Arrayable;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
-
 class AlibabaProductProductExtendInfo extends SDKDomain
 {
+    use Arrayable;
     private $key;
-    
+
     /**
     * @return 扩展结构的key
     */
@@ -15,7 +15,7 @@ class AlibabaProductProductExtendInfo extends SDKDomain
     {
         return $this->key;
     }
-    
+
     /**
      * 设置扩展结构的key
      * @param String $key
@@ -26,10 +26,10 @@ class AlibabaProductProductExtendInfo extends SDKDomain
     {
         $this->key = $key;
     }
-    
-            
+
+
     private $value;
-    
+
     /**
     * @return 扩展结构的value
     */
@@ -37,7 +37,7 @@ class AlibabaProductProductExtendInfo extends SDKDomain
     {
         return $this->value;
     }
-    
+
     /**
      * 设置扩展结构的value
      * @param String $value
@@ -50,10 +50,10 @@ class AlibabaProductProductExtendInfo extends SDKDomain
     {
         $this->value = $value;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -64,7 +64,7 @@ class AlibabaProductProductExtendInfo extends SDKDomain
             $this->value = $this->stdResult->{"value"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {
