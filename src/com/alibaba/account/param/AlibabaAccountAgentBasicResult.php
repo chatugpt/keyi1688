@@ -3,20 +3,21 @@
 namespace Keyi1688\com\alibaba\account\param;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
-use Keyi1688\AlibabaAccountAgentBasicParam\AlibabaAccountSimpleAccountInfo;
+use Keyi1688\com\alibaba\account\param\AlibabaAccountSimpleAccountInfo;
 
 class AlibabaAccountAgentBasicResult
 {
     private $result;
-    
+
     /**
-    * @return 会员信息
+     *
+    * @return AlibabaAccountSimpleAccountInfo 会员信息
     */
     public function getResult()
     {
         return $this->result;
     }
-    
+
     /**
      * 设置会员信息
      * @param AlibabaAccountSimpleAccountInfo $result
@@ -26,10 +27,10 @@ class AlibabaAccountAgentBasicResult
     {
         $this->result = $result;
     }
-    
-            
+
+
     private $errorCode;
-    
+
     /**
     * @return 错误编码
     */
@@ -37,7 +38,7 @@ class AlibabaAccountAgentBasicResult
     {
         return $this->errorCode;
     }
-    
+
     /**
      * 设置错误编码
      * @param String $errorCode
@@ -47,10 +48,10 @@ class AlibabaAccountAgentBasicResult
     {
         $this->errorCode = $errorCode;
     }
-    
-            
+
+
     private $errorMessage;
-    
+
     /**
     * @return 错误信息
     */
@@ -58,7 +59,7 @@ class AlibabaAccountAgentBasicResult
     {
         return $this->errorMessage;
     }
-    
+
     /**
      * 设置错误信息
      * @param String $errorMessage
@@ -68,10 +69,10 @@ class AlibabaAccountAgentBasicResult
     {
         $this->errorMessage = $errorMessage;
     }
-    
-        
+
+
     private $stdResult;
-    
+
     public function setStdResult($stdResult)
     {
         $this->stdResult = $stdResult;
@@ -87,7 +88,7 @@ class AlibabaAccountAgentBasicResult
             $this->errorMessage = $this->stdResult->{"errorMessage"};
         }
     }
-    
+
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {

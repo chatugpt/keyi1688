@@ -80,7 +80,7 @@ class AlibabaProductProductInfo extends SDKDomain
     private $attributes;
 
     /**
-    * @return AlibabaProductProductAttribute 商品属性和属性值
+    * @return AlibabaProductProductAttribute[] 商品属性和属性值
     */
     public function getAttributes()
     {
