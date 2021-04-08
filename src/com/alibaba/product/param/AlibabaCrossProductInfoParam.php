@@ -2,32 +2,34 @@
 
 namespace Keyi1688\com\alibaba\product\param;
 
-class AlibabaCrossProductInfoParam {
+class AlibabaCrossProductInfoParam
+{
 
         
         /**
     * @return 1688商品ID
     */
-        public function getProductId() {
+    public function getProductId()
+    {
         $tempResult = $this->sdkStdResult["productId"];
         return $tempResult;
     }
     
     /**
-     * 设置1688商品ID     
-     * @param Long $productId     
-     * 参数示例：<pre>573741401425</pre>     
+     * 设置1688商品ID
+     * @param Long $productId
+     * 参数示例：<pre>573741401425</pre>
      * 此参数必填     */
-    public function setProductId( $productId) {
+    public function setProductId($productId)
+    {
         $this->sdkStdResult["productId"] = $productId;
     }
     
         
     private $sdkStdResult=array();
     
-    public function getSdkStdResult(){
-    	return $this->sdkStdResult;
+    public function getSdkStdResult()
+    {
+        return $this->sdkStdResult;
     }
-
 }
-?>

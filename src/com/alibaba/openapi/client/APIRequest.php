@@ -1,47 +1,48 @@
 <?php
 namespace Keyi1688\com\alibaba\openapi\client;
 
-class APIRequest{
-	
-	/**
-	 * 
-	 * @var APIId
-	 */
-	var $apiId;
-	
-	/**
-	 * 
-	 * @var
-	 */
-	var $addtionalParams = array();
-	
-	/**
-	 * 
-	 * @var
-	 */
-	var $requestEntity;
-	
-	/**
-	 * 
-	 * @var
-	 */
-	var $attachments=array();
-	
-	/**
-	 * 
-	 * @var String
-	 */
-	var $authCodeKey;
-	
-	/**
-	 * 
-	 * @var String
-	 */
-	var $accessToken;
-	
-	/**
-	 * 
-	 * @var AuthorizationToken
-	 */
-	var $authToken;
+class APIRequest
+{
+    
+    /**
+     *
+     * @var APIId
+     */
+    public $apiId;
+    
+    /**
+     *
+     * @var
+     */
+    public $addtionalParams = array();
+    
+    /**
+     *
+     * @var
+     */
+    public $requestEntity;
+    
+    /**
+     *
+     * @var
+     */
+    public $attachments=array();
+    
+    /**
+     *
+     * @var String
+     */
+    public $authCodeKey;
+    
+    /**
+     *
+     * @var String
+     */
+    public $accessToken;
+    
+    /**
+     *
+     * @var AuthorizationToken
+     */
+    public $authToken;
 }
