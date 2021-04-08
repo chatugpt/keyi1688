@@ -1,4 +1,16 @@
 <?php
+
+use Keyi1688\com\alibaba\openapi\client\policy\ClientPolicy;
+use Keyi1688\com\alibaba\openapi\client\SyncAPIClient;
+use Keyi1688\com\alibaba\openapi\client\policy\RequestPolicy;
+use Keyi1688\com\alibaba\openapi\client\policy\DataProtocol;
+use Keyi1688\com\alibaba\product\push\param\AlibabaCrossSyncProductListPushedParam;
+use Keyi1688\com\alibaba\product\push\param\AlibabaCrossSyncProductListPushedResult;
+use Keyi1688\com\alibaba\openapi\client\APIRequest;
+use Keyi1688\com\alibaba\openapi\client\APIId;
+use Keyi1688\com\alibaba\product\param\AlibabaCrossProductInfoParam;
+use Keyi1688\com\alibaba\product\param\AlibabaCrossProductInfoResult;
+
 $config = [
         'appId' => '',
         'appSecret' => '',
