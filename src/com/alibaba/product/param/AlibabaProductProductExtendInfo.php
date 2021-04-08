@@ -1,7 +1,9 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
+
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
+
 class AlibabaProductProductExtendInfo extends SDKDomain
 {
     private $key;

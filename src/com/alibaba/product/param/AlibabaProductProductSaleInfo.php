@@ -1,9 +1,11 @@
 <?php
 
 namespace Keyi1688\com\alibaba\product\param;
+
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
 use ArrayObject;
+
 class AlibabaProductProductSaleInfo extends SDKDomain
 {
     private $supportOnlineTrade;

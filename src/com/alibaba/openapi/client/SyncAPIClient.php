@@ -104,7 +104,6 @@ class SyncAPIClient
             $data = curl_exec($ch);
         }
         $data = curl_exec($ch);
-        var_dump($data);
         if ($data) {
             $content = $data;
             $deSerializerTools = SerializerProvider::getDeSerializer($requestPolicy->responseProtocol);
