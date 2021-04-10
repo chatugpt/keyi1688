@@ -86,7 +86,7 @@ class AlibabaProductProductSaleInfo extends SDKDomain
      * @param array include @see AlibabaProductProductPriceRange[] $priceRanges
      * 参数示例：<pre>[]</pre>
      * 此参数必填     */
-    public function setPriceRanges(AlibabaProductProductPriceRange $priceRanges)
+    public function setPriceRanges(array $priceRanges)
     {
         $this->priceRanges = $priceRanges;
     }

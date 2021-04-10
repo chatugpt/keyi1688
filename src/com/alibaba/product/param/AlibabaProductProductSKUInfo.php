@@ -22,7 +22,7 @@ class AlibabaProductProductSKUInfo extends SDKDomain
      * @param array include @see AlibabaProductSKUAttrInfo[] $attributes
      * 参数示例：<pre>[]</pre>
      * 此参数必填     */
-    public function setAttributes(AlibabaProductSKUAttrInfo $attributes)
+    public function setAttributes(array $attributes)
     {
         $this->attributes = $attributes;
     }
