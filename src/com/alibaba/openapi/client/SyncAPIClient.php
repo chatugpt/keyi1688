@@ -101,7 +101,6 @@ class SyncAPIClient
             curl_setopt($ch, CURLOPT_POSTFIELDS, $paramToSign);
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            $data = curl_exec($ch);
         }
         $data = curl_exec($ch);
         if ($data) {

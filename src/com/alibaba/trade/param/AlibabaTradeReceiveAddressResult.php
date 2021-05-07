@@ -3,7 +3,6 @@
 namespace Keyi1688\com\alibaba\trade\param;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
-use Keyi1688\AlibabaTradeReceiveAddressGetParam\AlibabaTradeReceiveAddressItem;
 
 class AlibabaTradeReceiveAddressResult extends SDKDomain
 {
@@ -38,7 +37,7 @@ class AlibabaTradeReceiveAddressResult extends SDKDomain
             $object = json_decode(json_encode($receiveAddressItemsResult), true);
             $this->receiveAddressItems = array();
             for ($i = 0; $i < count($object); $i ++) {
-                $arrayobject = new ArrayObject($object [$i]);
+                $arrayobject = new \ArrayObject($object [$i]);
                 $AlibabaTradeReceiveAddressItemResult=new AlibabaTradeReceiveAddressItem();
                 $AlibabaTradeReceiveAddressItemResult->setArrayResult($arrayobject);
                 $this->receiveAddressItems [$i] = $AlibabaTradeReceiveAddressItemResult;

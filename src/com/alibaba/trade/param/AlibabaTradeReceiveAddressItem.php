@@ -282,37 +282,37 @@ class AlibabaTradeReceiveAddressItem extends SDKDomain
     {
         $this->arrayResult = $arrayResult;
         if (array_key_exists("id", $this->arrayResult)) {
-            $this->id = $arrayResult['${paramType.paramName}'];
+            $this->id = $arrayResult['id'];
         }
         if (array_key_exists("fullName", $this->arrayResult)) {
-            $this->fullName = $arrayResult['${paramType.paramName}'];
+            $this->fullName = $arrayResult['fullName'];
         }
         if (array_key_exists("address", $this->arrayResult)) {
-            $this->address = $arrayResult['${paramType.paramName}'];
+            $this->address = $arrayResult['address'];
         }
         if (array_key_exists("post", $this->arrayResult)) {
-            $this->post = $arrayResult['${paramType.paramName}'];
+            $this->post = $arrayResult['post'];
         }
         if (array_key_exists("phone", $this->arrayResult)) {
-            $this->phone = $arrayResult['${paramType.paramName}'];
+            $this->phone = $arrayResult['phone'];
         }
         if (array_key_exists("mobilePhone", $this->arrayResult)) {
-            $this->mobilePhone = $arrayResult['${paramType.paramName}'];
+            $this->mobilePhone = $arrayResult['mobilePhone'];
         }
         if (array_key_exists("addressCode", $this->arrayResult)) {
-            $this->addressCode = $arrayResult['${paramType.paramName}'];
+            $this->addressCode = $arrayResult['addressCode'];
         }
         if (array_key_exists("addressCodeText", $this->arrayResult)) {
-            $this->addressCodeText = $arrayResult['${paramType.paramName}'];
+            $this->addressCodeText = $arrayResult['addressCodeText'];
         }
         if (array_key_exists("isDefault", $this->arrayResult)) {
-            $this->isDefault = $arrayResult['${paramType.paramName}'];
+            $this->isDefault = $arrayResult['isDefault'];
         }
         if (array_key_exists("townCode", $this->arrayResult)) {
-            $this->townCode = $arrayResult['${paramType.paramName}'];
+            $this->townCode = $arrayResult['townCode'];
         }
         if (array_key_exists("townName", $this->arrayResult)) {
-            $this->townName = $arrayResult['${paramType.paramName}'];
+            $this->townName = $arrayResult['townName'];
         }
     }
 }
