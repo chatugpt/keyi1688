@@ -43,7 +43,7 @@ class AlibabaCrossProductInfoResult
      * @param array include @see AlibabaProductProductBizGroupInfo[] $bizGroupInfos
 
      * 此参数必填     */
-    public function setBizGroupInfos(array $bizGroupInfos)
+    public function setBizGroupInfos(AlibabaProductProductBizGroupInfo $bizGroupInfos)
     {
         $this->bizGroupInfos = $bizGroupInfos;
     }

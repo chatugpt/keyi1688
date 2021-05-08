@@ -92,7 +92,7 @@ class AlibabaProductProductInfo extends SDKDomain
      * @param array include @see AlibabaProductProductAttribute[] $attributes
      * 参数示例：<pre>[]</pre>
      * 此参数必填     */
-    public function setAttributes(array $attributes)
+    public function setAttributes(AlibabaProductProductAttribute $attributes)
     {
         $this->attributes = $attributes;
     }
@@ -305,7 +305,7 @@ class AlibabaProductProductInfo extends SDKDomain
      * @param array include @see AlibabaProductProductSKUInfo[] $skuInfos
      * 参数示例：<pre>[]</pre>
      * 此参数必填     */
-    public function setSkuInfos(array $skuInfos)
+    public function setSkuInfos(AlibabaProductProductSKUInfo $skuInfos)
     {
         $this->skuInfos = $skuInfos;
     }
@@ -368,7 +368,7 @@ class AlibabaProductProductInfo extends SDKDomain
      * @param array include @see AlibabaProductProductExtendInfo[] $extendInfos
      * 参数示例：<pre>[]</pre>
      * 此参数必填     */
-    public function setExtendInfos(array $extendInfos)
+    public function setExtendInfos(AlibabaProductProductExtendInfo $extendInfos)
     {
         $this->extendInfos = $extendInfos;
     }

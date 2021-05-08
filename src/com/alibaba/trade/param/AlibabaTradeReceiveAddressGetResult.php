@@ -3,7 +3,6 @@
 namespace Keyi1688\com\alibaba\trade\param;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
-use Keyi1688\AlibabaTradeReceiveAddressGetParam\AlibabaTradeReceiveAddressResult;
 
 class AlibabaTradeReceiveAddressGetResult
 {
@@ -117,18 +116,18 @@ class AlibabaTradeReceiveAddressGetResult
     {
         $this->arrayResult = $arrayResult;
         if (array_key_exists("result", $this->arrayResult)) {
-            $resultResult=$arrayResult['${paramType.paramName}'];
+            $resultResult=$arrayResult['result'];
             $this->result = new AlibabaTradeReceiveAddressResult();
             $this->result->setStdResult($resultResult);
         }
         if (array_key_exists("success", $this->arrayResult)) {
-            $this->success = $arrayResult['${paramType.paramName}'];
+            $this->success = $arrayResult['success'];
         }
         if (array_key_exists("code", $this->arrayResult)) {
-            $this->code = $arrayResult['${paramType.paramName}'];
+            $this->code = $arrayResult['code'];
         }
         if (array_key_exists("message", $this->arrayResult)) {
-            $this->message = $arrayResult['${paramType.paramName}'];
+            $this->message = $arrayResult['message'];
         }
     }
 }
