@@ -1,12 +1,16 @@
 <?php
 
 namespace Keyi1688\com\alibaba\trade\param;
+
+use Illuminate\Support\Arr;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
-use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
-use Keyi1688\AlibabaCreateOrderPreviewParam\AlibabaCreateOrderPreviewResultModel;
+use Keyi1688\Arrayable;
+
 
 class AlibabaCreateOrderPreviewResult
 {
+    use Arrayable;
+
     private $orderPreviewResuslt;
     
     /**
@@ -164,7 +168,7 @@ class AlibabaCreateOrderPreviewResult
             $object = json_decode(json_encode($orderPreviewResusltResult), true);
             $this->orderPreviewResuslt = array();
             for ($i = 0; $i < count($object); $i ++) {
-                $arrayobject = new ArrayObject($object [$i]);
+                $arrayobject = new \ArrayObject($object [$i]);
                 $AlibabaCreateOrderPreviewResultModelResult=new AlibabaCreateOrderPreviewResultModel();
                 $AlibabaCreateOrderPreviewResultModelResult->setArrayResult($arrayobject);
                 $this->orderPreviewResuslt [$i] = $AlibabaCreateOrderPreviewResultModelResult;
@@ -192,7 +196,7 @@ class AlibabaCreateOrderPreviewResult
     
     private $arrayResult;
     public function setArrayResult($arrayResult)
-    {
+    {   
         $this->arrayResult = $arrayResult;
         if (array_key_exists("orderPreviewResuslt", $this->arrayResult)) {
             $orderPreviewResusltResult=$arrayResult['${paramType.paramName}'];

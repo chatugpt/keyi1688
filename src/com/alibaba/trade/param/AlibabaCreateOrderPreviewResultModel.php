@@ -1,14 +1,16 @@
 <?php
 
 namespace Keyi1688\com\alibaba\trade\param;
+
+use Illuminate\Support\Arr;
 use Keyi1688\com\alibaba\openapi\client\entity\SDKDomain;
 use Keyi1688\com\alibaba\openapi\client\entity\ByteArray;
-use Keyi1688\AlibabaCreateOrderPreviewParam\AlibabaCreateOrderPreviewResultCargoModel;
-use Keyi1688\AlibabaCreateOrderPreviewParam\AlibabaTradePromotionModel;
-use Keyi1688\AlibabaCreateOrderPreviewParam\TradeModelExtensionList;
+use Keyi1688\Arrayable;
 
 class AlibabaCreateOrderPreviewResultModel extends SDKDomain
 {
+    use Arrayable;
+
     private $discountFee;
     
     /**
@@ -307,6 +309,7 @@ class AlibabaCreateOrderPreviewResultModel extends SDKDomain
     
     public function setStdResult($stdResult)
     {
+        var_dump($stdResult);exit;
         $this->stdResult = $stdResult;
         if (array_key_exists("discountFee", $this->stdResult)) {
             $this->discountFee = $this->stdResult->{"discountFee"};
@@ -379,52 +382,53 @@ class AlibabaCreateOrderPreviewResultModel extends SDKDomain
     private $arrayResult;
     public function setArrayResult($arrayResult)
     {
+        
         $this->arrayResult = $arrayResult;
         if (array_key_exists("discountFee", $this->arrayResult)) {
-            $this->discountFee = $arrayResult['${paramType.paramName}'];
+            $this->discountFee = $arrayResult['discountFee'];
         }
         if (array_key_exists("tradeModeNameList", $this->arrayResult)) {
-            $this->tradeModeNameList = $arrayResult['${paramType.paramName}'];
+            $this->tradeModeNameList = $arrayResult['tradeModeNameList'];
         }
         if (array_key_exists("status", $this->arrayResult)) {
-            $this->status = $arrayResult['${paramType.paramName}'];
+            $this->status = $arrayResult['status'];
         }
         if (array_key_exists("taoSampleSinglePromotion", $this->arrayResult)) {
-            $this->taoSampleSinglePromotion = $arrayResult['${paramType.paramName}'];
+            $this->taoSampleSinglePromotion = $arrayResult['taoSampleSinglePromotion'];
         }
         if (array_key_exists("sumPayment", $this->arrayResult)) {
-            $this->sumPayment = $arrayResult['${paramType.paramName}'];
+            $this->sumPayment = $arrayResult['sumPayment'];
         }
         if (array_key_exists("message", $this->arrayResult)) {
-            $this->message = $arrayResult['${paramType.paramName}'];
+            $this->message = $arrayResult['message'];
         }
         if (array_key_exists("sumCarriage", $this->arrayResult)) {
-            $this->sumCarriage = $arrayResult['${paramType.paramName}'];
+            $this->sumCarriage = $arrayResult['sumCarriage'];
         }
         if (array_key_exists("resultCode", $this->arrayResult)) {
-            $this->resultCode = $arrayResult['${paramType.paramName}'];
+            $this->resultCode = $arrayResult['resultCode'];
         }
         if (array_key_exists("sumPaymentNoCarriage", $this->arrayResult)) {
-            $this->sumPaymentNoCarriage = $arrayResult['${paramType.paramName}'];
+            $this->sumPaymentNoCarriage = $arrayResult['sumPaymentNoCarriage'];
         }
         if (array_key_exists("additionalFee", $this->arrayResult)) {
-            $this->additionalFee = $arrayResult['${paramType.paramName}'];
+            $this->additionalFee = $arrayResult['additionalFee'];
         }
         if (array_key_exists("flowFlag", $this->arrayResult)) {
-            $this->flowFlag = $arrayResult['${paramType.paramName}'];
+            $this->flowFlag = $arrayResult['flowFlag'];
         }
         if (array_key_exists("cargoList", $this->arrayResult)) {
-            $cargoListResult=$arrayResult['${paramType.paramName}'];
+            $cargoListResult=$arrayResult['cargoList'];
             $this->cargoList = new AlibabaCreateOrderPreviewResultCargoModel();
             $this->cargoList->setStdResult($cargoListResult);
         }
         if (array_key_exists("shopPromotionList", $this->arrayResult)) {
-            $shopPromotionListResult=$arrayResult['${paramType.paramName}'];
+            $shopPromotionListResult=$arrayResult['shopPromotionList'];
             $this->shopPromotionList = new AlibabaTradePromotionModel();
             $this->shopPromotionList->setStdResult($shopPromotionListResult);
         }
         if (array_key_exists("tradeModelList", $this->arrayResult)) {
-            $tradeModelListResult=$arrayResult['${paramType.paramName}'];
+            $tradeModelListResult=$arrayResult['tradeModelList'];
             $this->tradeModelList = new TradeModelExtensionList();
             $this->tradeModelList->setStdResult($tradeModelListResult);
         }
